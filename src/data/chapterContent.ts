@@ -1,3 +1,25 @@
+export interface SolvedExample {
+  question: string;
+  solution: string;
+  marks?: number;
+}
+
+export interface ExamTip {
+  category: string;
+  tip: string;
+}
+
+export interface FillBlank {
+  sentence: string;
+  answer: string;
+  hint?: string;
+}
+
+export interface MatchPair {
+  left: string;
+  right: string;
+}
+
 export interface ChapterContent {
   chapterId: string;
   introduction: string;
@@ -6,6 +28,11 @@ export interface ChapterContent {
   didYouKnow: string[];
   revisionSummary: string[];
   practiceQuestions: { type: "short" | "long" | "icse"; question: string }[];
+  solvedExamples?: SolvedExample[];
+  examTips?: ExamTip[];
+  markingScheme?: string[];
+  fillInBlanks?: FillBlank[];
+  matchPairs?: MatchPair[];
 }
 
 export const chapterContents: Record<string, ChapterContent> = {
