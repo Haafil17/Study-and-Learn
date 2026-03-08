@@ -111,28 +111,6 @@ export const chapterContents: Record<string, ChapterContent> = {
       { left: "Root hair", right: "Absorbs water by osmosis" },
       { left: "Translocation", right: "Movement of food in phloem" },
     ],
-    solvedExamples: [
-      { question: "Differentiate between self-pollination and cross-pollination. (4 marks)", solution: "Self-pollination:\n1. Transfer of pollen within the same flower or same plant\n2. Does not require external agents\n3. Produces genetically identical offspring\n4. Seeds are less viable\n\nCross-pollination:\n1. Transfer of pollen between flowers of different plants of same species\n2. Requires agents (insects, wind, water, birds)\n3. Produces genetically diverse offspring\n4. Seeds are more viable and healthier", marks: 4 },
-      { question: "Explain tissue culture and its advantages. (4 marks)", solution: "Tissue culture is a technique of growing plants from a small piece of plant tissue (explant) in a nutrient medium under sterile conditions.\n\nSteps:\n1. A small piece of tissue is taken from the plant\n2. It is placed in a sterile nutrient medium containing plant hormones\n3. The tissue grows into a mass of cells called callus\n4. Callus is transferred to differentiation medium to form plantlets\n5. Plantlets are transferred to soil\n\nAdvantages:\n• Mass production of disease-free plants\n• Production of plants in any season\n• Conservation of endangered species\n• Genetically identical plants (clones) with desired traits", marks: 4 },
-    ],
-    examTips: [
-      { category: "Diagram", tip: "Draw a labelled diagram of a flower showing all four whorls — this question appears almost every year." },
-      { category: "Compare", tip: "Asexual vs Sexual reproduction differentiation is a common 4-mark question." },
-      { category: "Application", tip: "Know real-life examples for each type of vegetative propagation (potato=tuber, onion=bulb, Bryophyllum=leaf)." },
-    ],
-    fillInBlanks: [
-      { sentence: "The transfer of pollen from anther to stigma is called ___.", answer: "pollination", hint: "Starts with 'p'" },
-      { sentence: "The cell formed by fusion of male and female gametes is called a ___.", answer: "zygote" },
-      { sentence: "Growing plants from a small tissue in a nutrient medium is called ___.", answer: "tissue culture" },
-      { sentence: "In Hydra, reproduction occurs by ___.", answer: "budding", hint: "A bud grows into a new organism" },
-    ],
-    matchPairs: [
-      { left: "Binary fission", right: "Amoeba" },
-      { left: "Budding", right: "Hydra" },
-      { left: "Spore formation", right: "Ferns" },
-      { left: "Vegetative propagation", right: "Bryophyllum" },
-      { left: "Tissue culture", right: "Mass production of plants" },
-    ],
   },
   "bio-2": {
     chapterId: "bio-2",
