@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { subjects } from "@/data/subjects";
 import {
   BookOpen, Home, LayoutDashboard, Gamepad2, Lightbulb, Search,
-  Menu, X, ChevronDown, ChevronRight, GraduationCap,
+  Menu, X, ChevronDown, ChevronRight, GraduationCap, Sun, Moon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +17,17 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [expandedSubject, setExpandedSubject] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark");
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
   const location = useLocation();
 
   const navItems = [
@@ -220,6 +231,13 @@ export default function AppLayout({ children }: AppLayoutProps) {
             />
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/20 text-secondary">
               <BookOpen size={14} />
               <span className="text-xs font-medium">7 Subjects</span>
