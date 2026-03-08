@@ -1,3 +1,25 @@
+export interface SolvedExample {
+  question: string;
+  solution: string;
+  marks?: number;
+}
+
+export interface ExamTip {
+  category: string;
+  tip: string;
+}
+
+export interface FillBlank {
+  sentence: string;
+  answer: string;
+  hint?: string;
+}
+
+export interface MatchPair {
+  left: string;
+  right: string;
+}
+
 export interface ChapterContent {
   chapterId: string;
   introduction: string;
@@ -6,6 +28,11 @@ export interface ChapterContent {
   didYouKnow: string[];
   revisionSummary: string[];
   practiceQuestions: { type: "short" | "long" | "icse"; question: string }[];
+  solvedExamples?: SolvedExample[];
+  examTips?: ExamTip[];
+  markingScheme?: string[];
+  fillInBlanks?: FillBlank[];
+  matchPairs?: MatchPair[];
 }
 
 export const chapterContents: Record<string, ChapterContent> = {
@@ -51,6 +78,38 @@ export const chapterContents: Record<string, ChapterContent> = {
       { type: "long", question: "Explain the process of transpiration and its importance to plants." },
       { type: "icse", question: "[ICSE Board Style] Give reasons: Root hairs are important for water absorption in plants." },
       { type: "icse", question: "[ICSE Board Style] Differentiate between xylem and phloem. (Any 4 points)" },
+    ],
+    solvedExamples: [
+      { question: "Differentiate between xylem and phloem. (4 marks)", solution: "Xylem:\n1. Transports water and minerals upward\n2. Made of dead cells (vessels and tracheids)\n3. Transport is mainly physical (transpiration pull)\n4. Located in the centre of vascular bundle\n\nPhloem:\n1. Transports prepared food (sucrose) both ways\n2. Made of living cells (sieve tubes and companion cells)\n3. Transport requires metabolic energy\n4. Located on the outer side of vascular bundle", marks: 4 },
+      { question: "Explain the process of transpiration and its significance. (5 marks)", solution: "Transpiration is the loss of water vapour from the aerial parts of a plant, mainly through stomata on leaves.\n\nProcess:\n1. Water is absorbed by root hairs through osmosis\n2. It moves upward through xylem vessels\n3. In leaves, water evaporates from mesophyll cells into air spaces\n4. Water vapour exits through stomatal pores\n\nSignificance:\n• Creates transpiration pull — the main force drawing water upward\n• Helps in absorption of minerals dissolved in soil water\n• Cools the plant surface (like sweating in humans)\n• Maintains turgidity of cells\n• Helps in distribution of minerals throughout the plant", marks: 5 },
+      { question: "Define osmosis. An experiment shows wilting of a plant kept in concentrated salt solution. Explain why. (3 marks)", solution: "Osmosis: Movement of water molecules from a region of higher water concentration (dilute solution) to a region of lower water concentration (concentrated solution) through a semipermeable membrane.\n\nExplanation of wilting:\n1. The concentrated salt solution outside the root cells has lower water concentration than inside the cells\n2. Water moves OUT of the root cells by exosmosis\n3. Cells lose water, become flaccid (lose turgidity)\n4. The plant wilts because cells can no longer maintain their shape", marks: 3 },
+    ],
+    examTips: [
+      { category: "Diagram", tip: "Always draw labelled diagrams for xylem and phloem cross-sections — this can fetch 2 extra marks." },
+      { category: "Definition", tip: "Osmosis definition must include 'semipermeable membrane' — without it, you lose marks." },
+      { category: "Compare", tip: "For differentiation questions, use a table format with at least 4 points for full marks." },
+      { category: "Experiment", tip: "Questions on transpiration experiments (cobalt chloride paper) are frequently asked — practice the procedure." },
+    ],
+    markingScheme: [
+      "Definition questions: 1-2 marks — write concise, precise definitions with key terms",
+      "Differentiation: 4 marks — use table format, minimum 4 points of comparison",
+      "Diagram-based: 2-3 marks — neat, labelled diagrams with title",
+      "Experiment questions: 3-5 marks — aim, materials, procedure, observation, conclusion",
+      "Give reasons: 2 marks — state the fact + explain the science behind it",
+    ],
+    fillInBlanks: [
+      { sentence: "The movement of water from a dilute to concentrated solution through a semipermeable membrane is called ___.", answer: "osmosis", hint: "Starts with 'o'" },
+      { sentence: "___ is the plant tissue that transports water and minerals upward.", answer: "Xylem", hint: "Starts with 'X'" },
+      { sentence: "The transport of food materials in phloem is called ___.", answer: "translocation", hint: "Starts with 'trans'" },
+      { sentence: "Loss of water vapour from aerial parts of a plant is called ___.", answer: "transpiration", hint: "Through stomata" },
+      { sentence: "Elements needed in large quantities by plants are called ___.", answer: "macro-nutrients", hint: "Macro means large" },
+    ],
+    matchPairs: [
+      { left: "Xylem", right: "Transports water upward" },
+      { left: "Phloem", right: "Transports food" },
+      { left: "Stomata", right: "Site of transpiration" },
+      { left: "Root hair", right: "Absorbs water by osmosis" },
+      { left: "Translocation", right: "Movement of food in phloem" },
     ],
   },
   "bio-2": {

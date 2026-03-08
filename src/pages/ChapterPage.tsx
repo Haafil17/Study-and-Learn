@@ -3,11 +3,15 @@ import { getSubject, getChapter } from "@/data/subjects";
 import { getChapterContent } from "@/data/chapterContent";
 import { getAnalogiesForChapter } from "@/data/analogies";
 import { getQuestionsForChapter } from "@/data/quizzes";
+import { chapterExtras } from "@/data/chapterExtras";
 import { motion } from "framer-motion";
-import { ArrowLeft, BookOpen, Car, Plane, Lightbulb, Brain, HelpCircle, Star, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, BookOpen, Lightbulb, Brain, HelpCircle, Star, CheckCircle2, GraduationCap, Puzzle } from "lucide-react";
 import QuizSection from "@/components/QuizSection";
 import AnalogyCard from "@/components/AnalogyCard";
 import FlashcardDeck from "@/components/FlashcardDeck";
+import ExamPrepSection from "@/components/ExamPrepSection";
+import FillInBlanks from "@/components/FillInBlanks";
+import MatchTheFollowing from "@/components/MatchTheFollowing";
 
 export default function ChapterPage() {
   const { subjectKey, chapterId } = useParams<{ subjectKey: string; chapterId: string }>();
@@ -16,6 +20,14 @@ export default function ChapterPage() {
   const content = getChapterContent(chapterId || "");
   const chapterAnalogies = getAnalogiesForChapter(chapterId || "");
   const questions = getQuestionsForChapter(chapterId || "");
+  const extras = chapterExtras[chapterId || ""];
+
+  // Merge extras into content if available
+  const solvedExamples = extras?.solvedExamples || content?.solvedExamples || [];
+  const examTips = extras?.examTips || content?.examTips || [];
+  const markingScheme = extras?.markingScheme || content?.markingScheme || [];
+  const fillInBlanks = extras?.fillInBlanks || content?.fillInBlanks || [];
+  const matchPairs = extras?.matchPairs || content?.matchPairs || [];
 
   if (!subject || !chapter) {
     return <div className="p-8 text-center text-muted-foreground">Chapter not found.</div>;
@@ -23,12 +35,10 @@ export default function ChapterPage() {
 
   return (
     <div className="px-6 py-8 max-w-4xl mx-auto pb-20">
-      {/* Breadcrumb */}
       <Link to={`/subject/${subject.key}`} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-6">
         <ArrowLeft size={14} /> Back to {subject.name}
       </Link>
 
-      {/* Header */}
       <div className="mb-8">
         <span className={`subject-badge ${subject.badgeClass} mb-3`}>
           <subject.icon size={13} /> {subject.name}
@@ -82,6 +92,26 @@ export default function ChapterPage() {
             </section>
           )}
 
+          {/* Match the Following */}
+          {matchPairs.length > 0 && (
+            <section>
+              <h2 className="font-heading text-lg font-bold flex items-center gap-2 mb-4">
+                <Puzzle size={18} className="text-secondary" /> Match the Following
+              </h2>
+              <MatchTheFollowing pairs={matchPairs} />
+            </section>
+          )}
+
+          {/* Fill in the Blanks */}
+          {fillInBlanks.length > 0 && (
+            <section>
+              <h2 className="font-heading text-lg font-bold flex items-center gap-2 mb-4">
+                <HelpCircle size={18} className="text-primary" /> Fill in the Blanks
+              </h2>
+              <FillInBlanks questions={fillInBlanks} />
+            </section>
+          )}
+
           {/* Analogies */}
           {chapterAnalogies.length > 0 && (
             <section>
@@ -128,6 +158,20 @@ export default function ChapterPage() {
             </ul>
           </section>
 
+          {/* ICSE Exam Prep */}
+          {(solvedExamples.length > 0 || examTips.length > 0) && (
+            <section>
+              <h2 className="font-heading text-lg font-bold flex items-center gap-2 mb-4">
+                <GraduationCap size={18} className="text-secondary" /> ICSE Board Exam Preparation
+              </h2>
+              <ExamPrepSection
+                examTips={examTips}
+                solvedExamples={solvedExamples}
+                markingScheme={markingScheme}
+              />
+            </section>
+          )}
+
           {/* Quiz */}
           {questions.length > 0 && (
             <section>
@@ -144,32 +188,30 @@ export default function ChapterPage() {
               <HelpCircle size={18} className="text-accent" /> Practice Questions
             </h2>
             <div className="space-y-4">
-              <div>
-                <h3 className="font-semibold text-sm mb-2">Short Answer Questions</h3>
-                <ol className="list-decimal list-inside space-y-2">
-                  {content.practiceQuestions.filter((q) => q.type === "short").map((q, i) => (
-                    <li key={i} className="text-sm text-muted-foreground">{q.question}</li>
-                  ))}
-                </ol>
-              </div>
-              <div>
-                <h3 className="font-semibold text-sm mb-2">Long Answer Questions</h3>
-                <ol className="list-decimal list-inside space-y-2">
-                  {content.practiceQuestions.filter((q) => q.type === "long").map((q, i) => (
-                    <li key={i} className="text-sm text-muted-foreground">{q.question}</li>
-                  ))}
-                </ol>
-              </div>
+              {["short", "long", "icse"].map((type) => {
+                const qs = content.practiceQuestions.filter((q) => q.type === type);
+                if (qs.length === 0) return null;
+                const labels: Record<string, string> = { short: "Short Answer Questions", long: "Long Answer Questions", icse: "ICSE Board Style Questions" };
+                return (
+                  <div key={type}>
+                    <h3 className="font-semibold text-sm mb-2">{labels[type]}</h3>
+                    <ol className="list-decimal list-inside space-y-2">
+                      {qs.map((q, i) => (
+                        <li key={i} className="text-sm text-muted-foreground">{q.question}</li>
+                      ))}
+                    </ol>
+                  </div>
+                );
+              })}
             </div>
           </section>
         </motion.div>
       ) : (
-        /* Placeholder for chapters without detailed content */
         <div className="bg-card rounded-xl p-8 card-elevated text-center">
           <BookOpen size={40} className="mx-auto text-muted-foreground mb-4" />
           <h2 className="font-heading text-xl font-bold mb-2">Content Coming Soon</h2>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
-            Detailed notes, quizzes, analogies, and practice questions for this chapter are being prepared. Check back soon!
+            Detailed notes, quizzes, analogies, and practice questions for this chapter are being prepared.
           </p>
           <div className="mt-6">
             <h3 className="font-semibold text-sm mb-3">Key Topics in This Chapter</h3>
