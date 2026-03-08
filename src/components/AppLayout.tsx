@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { subjects } from "@/data/subjects";
 import {
   BookOpen, Home, LayoutDashboard, Gamepad2, Lightbulb, Search,
-  Menu, X, ChevronDown, ChevronRight, GraduationCap,
+  Menu, X, ChevronDown, ChevronRight, GraduationCap, Sun, Moon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
