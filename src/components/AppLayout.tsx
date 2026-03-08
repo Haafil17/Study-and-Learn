@@ -231,6 +231,13 @@ export default function AppLayout({ children }: AppLayoutProps) {
             />
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/20 text-secondary">
               <BookOpen size={14} />
               <span className="text-xs font-medium">7 Subjects</span>
