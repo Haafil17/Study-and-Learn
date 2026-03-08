@@ -127,6 +127,37 @@ export const quizQuestions: QuizQuestion[] = [
   { id: "q104", chapterId: "comp-7", question: "Phishing is:", options: ["A computer virus", "Fraudulent info stealing", "A programming language", "A search engine"], correctIndex: 1, explanation: "Phishing uses fake emails/websites to steal personal information." },
   { id: "q105", chapterId: "comp-8", question: "AI stands for:", options: ["Auto Intelligence", "Artificial Intelligence", "Automated Information", "Applied Intelligence"], correctIndex: 1, explanation: "AI = Artificial Intelligence — machines simulating human intelligence." },
   { id: "q106", chapterId: "comp-8", question: "Supervised learning uses:", options: ["Unlabelled data", "Labelled data", "No data", "Random data"], correctIndex: 1, explanation: "Supervised learning uses labelled training data." },
+
+  // ===== ADDITIONAL QUESTIONS FOR BETTER COVERAGE =====
+  // History extras
+  { id: "q107", chapterId: "hist-3", question: "Who was the last Mughal emperor?", options: ["Aurangzeb", "Shah Jahan", "Bahadur Shah Zafar", "Akbar"], correctIndex: 2, explanation: "Bahadur Shah Zafar was the last Mughal emperor, deposed by the British after 1857." },
+  { id: "q108", chapterId: "hist-3", question: "Nadir Shah invaded Delhi in:", options: ["1707", "1739", "1757", "1764"], correctIndex: 1, explanation: "Nadir Shah looted Delhi in 1739 and took the Kohinoor diamond." },
+  { id: "q109", chapterId: "hist-5", question: "The Permanent Settlement was introduced by:", options: ["Lord Dalhousie", "Lord Cornwallis", "Lord Curzon", "Lord Bentinck"], correctIndex: 1, explanation: "Lord Cornwallis introduced the Permanent Settlement in Bengal (1793)." },
+  { id: "q110", chapterId: "hist-7", question: "Arya Samaj was founded by:", options: ["Raja Ram Mohan Roy", "Vivekananda", "Dayanand Saraswati", "Jyotiba Phule"], correctIndex: 2, explanation: "Swami Dayanand Saraswati founded Arya Samaj in 1875." },
+  { id: "q111", chapterId: "hist-10", question: "The President of India is the supreme commander of:", options: ["Parliament", "Armed Forces", "Supreme Court", "State Governors"], correctIndex: 1, explanation: "The President is the supreme commander of the defence forces of India." },
+  { id: "q112", chapterId: "hist-11", question: "Habeas Corpus means:", options: ["We command", "By what authority", "Produce the body", "Stop proceedings"], correctIndex: 2, explanation: "Habeas Corpus orders authorities to produce an arrested person before court." },
+
+  // Geography extras
+  { id: "q113", chapterId: "geo-2", question: "In a grid reference, we read first:", options: ["Northings", "Eastings", "Altitude", "Longitude"], correctIndex: 1, explanation: "Eastings first (horizontal), then Northings (vertical) — 'Along the corridor, up the stairs.'" },
+  { id: "q114", chapterId: "geo-4", question: "The most fertile layer of soil is:", options: ["Subsoil", "Topsoil", "Bedrock", "Weathered rock"], correctIndex: 1, explanation: "Topsoil (A horizon) is the most fertile, rich in humus." },
+  { id: "q115", chapterId: "geo-5", question: "The Sundarbans is an example of:", options: ["Evergreen forest", "Deciduous forest", "Mangrove forest", "Alpine forest"], correctIndex: 2, explanation: "The Sundarbans is the world's largest mangrove forest." },
+  { id: "q116", chapterId: "geo-6", question: "The most water-efficient irrigation method is:", options: ["Canal", "Flood", "Drip", "Sprinkler"], correctIndex: 2, explanation: "Drip irrigation delivers water directly to roots with minimal waste." },
+  { id: "q117", chapterId: "geo-9", question: "Wheat is a:", options: ["Kharif crop", "Rabi crop", "Zaid crop", "Plantation crop"], correctIndex: 1, explanation: "Wheat is a Rabi (winter) crop sown in October-November." },
+
+  // Math extras
+  { id: "q118", chapterId: "math-4", question: "∛1000 equals:", options: ["10", "100", "31", "33"], correctIndex: 0, explanation: "10 × 10 × 10 = 1000, so ∛1000 = 10." },
+  { id: "q119", chapterId: "math-5", question: "A number is divisible by 9 if:", options: ["Last digit is 9", "Sum of digits ÷ 9", "It's odd", "Ends in 0"], correctIndex: 1, explanation: "A number is divisible by 9 if the sum of its digits is divisible by 9." },
+  { id: "q120", chapterId: "math-9", question: "If 8 workers finish in 6 days, 12 workers finish in:", options: ["4 days", "9 days", "3 days", "8 days"], correctIndex: 0, explanation: "Inverse variation: 8×6 = 48 worker-days. 48/12 = 4 days." },
+  { id: "q121", chapterId: "math-10", question: "If A does work in 10 days, A's 1-day work is:", options: ["10", "1/10", "0.1%", "10%"], correctIndex: 1, explanation: "If total work = 1, then 1-day work = 1/10 of the job." },
+  { id: "q122", chapterId: "math-13", question: "Solve: 3x + 5 = 20. x =", options: ["3", "5", "7", "15"], correctIndex: 1, explanation: "3x = 20 - 5 = 15. x = 15/3 = 5." },
+  { id: "q123", chapterId: "math-14", question: "If x > 3 and x < 8, x ∈ N, then x =", options: ["{3,4,5,6,7,8}", "{4,5,6,7}", "{3,8}", "{4,5,6,7,8}"], correctIndex: 1, explanation: "Natural numbers between 3 and 8 (not including 3 and 8): {4,5,6,7}." },
+  { id: "q124", chapterId: "math-17", question: "To construct a quadrilateral, minimum measurements needed:", options: ["3", "4", "5", "6"], correctIndex: 2, explanation: "5 independent measurements are needed to construct a unique quadrilateral." },
+  { id: "q125", chapterId: "math-18", question: "The longest chord of a circle is:", options: ["Radius", "Diameter", "Arc", "Secant"], correctIndex: 1, explanation: "The diameter is the longest possible chord, passing through the centre." },
+
+  // Computer extras
+  { id: "q126", chapterId: "comp-2", question: "Which tag creates a hyperlink?", options: ["<link>", "<a>", "<href>", "<url>"], correctIndex: 1, explanation: "<a href='url'>text</a> creates a hyperlink in HTML." },
+  { id: "q127", chapterId: "comp-4", question: "What does 'elif' mean in Python?", options: ["End if", "Else if", "Equal if", "Extra if"], correctIndex: 1, explanation: "elif = else if — checks an alternative condition." },
+  { id: "q128", chapterId: "comp-6", question: "list.append(5) adds 5 to:", options: ["Beginning", "End", "Middle", "Random position"], correctIndex: 1, explanation: "append() adds the element to the end of the list." },
 ];
 
 export function getQuestionsForChapter(chapterId: string) {

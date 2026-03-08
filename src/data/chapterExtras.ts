@@ -971,4 +971,578 @@ export const chapterExtras: Record<string, ChapterExtras> = {
       { left: "VPN", right: "Virtual Private Network" },
     ],
   },
+
+  // ===== MISSING MATH EXTRAS =====
+  "math-4": {
+    solvedExamples: [
+      { question: "Find ∛13824 by prime factorization. (3 marks)", solution: "13824 = 2 × 6912 = 2 × 2 × 3456 = ... = 2⁹ × 3³\nGroup in triples: (2³)(2³)(2³)(3³)\n∛13824 = 2 × 2 × 2 × 3 = 24", marks: 3 },
+    ],
+    examTips: [
+      { category: "Method", tip: "For cube root: prime factorize, group in triples, take one from each group." },
+    ],
+    fillInBlanks: [
+      { sentence: "∛729 = ___.", answer: "9" },
+      { sentence: "∛64 = ___.", answer: "4" },
+      { sentence: "1729 is the ___-Ramanujan number.", answer: "Hardy" },
+    ],
+    matchPairs: [
+      { left: "∛8", right: "2" },
+      { left: "∛27", right: "3" },
+      { left: "∛125", right: "5" },
+      { left: "∛1000", right: "10" },
+    ],
+  },
+  "math-5": {
+    solvedExamples: [
+      { question: "If 21y5 is divisible by 9, find the value of y. (2 marks)", solution: "Sum of digits = 2 + 1 + y + 5 = 8 + y\nFor divisibility by 9: 8 + y = 9 → y = 1", marks: 2 },
+    ],
+    examTips: [
+      { category: "Rule", tip: "Divisibility by 9: sum of all digits divisible by 9. By 3: sum divisible by 3." },
+    ],
+    fillInBlanks: [
+      { sentence: "A number is divisible by 3 if the sum of its ___ is divisible by 3.", answer: "digits" },
+      { sentence: "A 2-digit number ab in generalized form is ___.", answer: "10a + b" },
+    ],
+    matchPairs: [
+      { left: "Divisible by 2", right: "Last digit even" },
+      { left: "Divisible by 3", right: "Digit sum ÷ 3" },
+      { left: "Divisible by 5", right: "Ends in 0 or 5" },
+      { left: "Divisible by 9", right: "Digit sum ÷ 9" },
+    ],
+  },
+  "math-6": {
+    solvedExamples: [
+      { question: "If A = {2,4,6,8}, B = {4,8,12}, U = {2,4,6,8,10,12}. Find A∪B, A∩B, A'. (3 marks)", solution: "A∪B = {2,4,6,8,12}\nA∩B = {4,8}\nA' = U − A = {10,12}", marks: 3 },
+    ],
+    examTips: [
+      { category: "Diagram", tip: "Always draw a Venn diagram for set problems — it helps visualize and avoid errors." },
+    ],
+    fillInBlanks: [
+      { sentence: "A∪B contains ___ elements in A or B or both.", answer: "all" },
+      { sentence: "If A∩B = ∅, the sets are called ___.", answer: "disjoint" },
+    ],
+    matchPairs: [
+      { left: "A∪B", right: "Union — all elements" },
+      { left: "A∩B", right: "Intersection — common" },
+      { left: "A'", right: "Complement — not in A" },
+      { left: "∅", right: "Empty/null set" },
+    ],
+  },
+  "math-9": {
+    solvedExamples: [
+      { question: "If 15 workers build a wall in 48 hours, how long will 20 workers take? (2 marks)", solution: "Inverse variation: 15 × 48 = 720 worker-hours\n20 workers: 720/20 = 36 hours", marks: 2 },
+    ],
+    examTips: [
+      { category: "Identify", tip: "First identify: direct or inverse? More workers=less time (inverse). More items=more cost (direct)." },
+    ],
+    fillInBlanks: [
+      { sentence: "If x doubles and y also doubles, it is ___ variation.", answer: "direct" },
+      { sentence: "Speed and time are ___ proportional.", answer: "inversely" },
+    ],
+    matchPairs: [
+      { left: "More items, more cost", right: "Direct variation" },
+      { left: "More workers, less time", right: "Inverse variation" },
+      { left: "More speed, less time", right: "Inverse variation" },
+      { left: "y = kx", right: "Direct proportion" },
+    ],
+  },
+  "math-10": {
+    solvedExamples: [
+      { question: "A can do a job in 12 days, B in 15 days. How long together? (2 marks)", solution: "A's rate = 1/12, B's rate = 1/15\nTogether: 1/12 + 1/15 = 5/60 + 4/60 = 9/60 = 3/20\nTime = 20/3 = 6⅔ days", marks: 2 },
+    ],
+    examTips: [
+      { category: "Method", tip: "Find each person's 1-day work as fraction, add them, take reciprocal." },
+    ],
+    fillInBlanks: [
+      { sentence: "If A does a job in 10 days, A's 1-day work = ___.", answer: "1/10" },
+      { sentence: "A pipe that fills a tank does ___ work.", answer: "positive" },
+    ],
+    matchPairs: [
+      { left: "A's work rate", right: "1/(days A takes)" },
+      { left: "Combined rate", right: "Sum of individual rates" },
+      { left: "Filling pipe", right: "Positive work" },
+      { left: "Draining pipe", right: "Negative work" },
+    ],
+  },
+  "math-12": {
+    solvedExamples: [
+      { question: "Factorize: (i) x² + 5x + 6 (ii) 4x² − 9. (3 marks)", solution: "(i) x² + 5x + 6 = (x+2)(x+3)\n(ii) 4x² − 9 = (2x)² − 3² = (2x+3)(2x−3)", marks: 3 },
+    ],
+    examTips: [
+      { category: "Identity", tip: "For a²−b²: identify squares first. For x²+bx+c: find factors of c that add to b." },
+    ],
+    fillInBlanks: [
+      { sentence: "x² − 25 = (x+5)(___)", answer: "x−5" },
+      { sentence: "x² + 7x + 12 = (x+3)(___)", answer: "x+4" },
+    ],
+    matchPairs: [
+      { left: "x²−y²", right: "(x+y)(x−y)" },
+      { left: "x²+2xy+y²", right: "(x+y)²" },
+      { left: "Common factor", right: "Take HCF out" },
+      { left: "Regrouping", right: "Rearrange and factor" },
+    ],
+  },
+  "math-13": {
+    solvedExamples: [
+      { question: "Solve: (2x+3)/5 = (3x−2)/7. (2 marks)", solution: "Cross multiply: 7(2x+3) = 5(3x−2)\n14x + 21 = 15x − 10\nx = 31", marks: 2 },
+    ],
+    examTips: [
+      { category: "Method", tip: "For fraction equations, cross-multiply. Always verify by substituting back." },
+    ],
+    fillInBlanks: [
+      { sentence: "To solve an equation, we ___ terms across the equals sign.", answer: "transpose" },
+      { sentence: "In 3x + 5 = 20, x = ___.", answer: "5" },
+    ],
+    matchPairs: [
+      { left: "Transposing", right: "Moving terms across =" },
+      { left: "Cross multiplication", right: "a/b = c/d → ad = bc" },
+      { left: "Linear equation", right: "Highest power is 1" },
+    ],
+  },
+  "math-14": {
+    solvedExamples: [
+      { question: "Solve: −3 ≤ 2x − 1 < 5, x ∈ I. (3 marks)", solution: "Add 1: −2 ≤ 2x < 6\nDivide by 2: −1 ≤ x < 3\nx ∈ I: x = {−1, 0, 1, 2}", marks: 3 },
+    ],
+    examTips: [
+      { category: "Rule", tip: "When multiplying/dividing by a negative number, REVERSE the inequality sign." },
+    ],
+    fillInBlanks: [
+      { sentence: "When dividing an inequality by a negative number, the sign ___.", answer: "reverses" },
+      { sentence: "x > 3 means x is ___ than 3.", answer: "greater" },
+    ],
+    matchPairs: [
+      { left: ">", right: "Greater than" },
+      { left: "≤", right: "Less than or equal to" },
+      { left: "Open circle", right: "Not included" },
+      { left: "Closed circle", right: "Included" },
+    ],
+  },
+  "math-16": {
+    solvedExamples: [
+      { question: "Verify Euler's formula for a cuboid. (2 marks)", solution: "Cuboid: F=6, V=8, E=12\nF + V − E = 6 + 8 − 12 = 2 ✓", marks: 2 },
+    ],
+    examTips: [
+      { category: "Formula", tip: "Euler's formula F + V − E = 2 for all convex polyhedra." },
+    ],
+    fillInBlanks: [
+      { sentence: "Euler's formula: F + V − E = ___.", answer: "2" },
+      { sentence: "A cube has ___ faces.", answer: "6" },
+    ],
+    matchPairs: [
+      { left: "Cube", right: "6 faces, 8 vertices, 12 edges" },
+      { left: "Tetrahedron", right: "4 faces, 4 vertices, 6 edges" },
+      { left: "Triangular prism", right: "5 faces, 6 vertices, 9 edges" },
+    ],
+  },
+  "math-17": {
+    solvedExamples: [
+      { question: "Construct quadrilateral ABCD: AB=4cm, BC=5cm, CD=6cm, DA=5.5cm, AC=7cm. (4 marks)", solution: "Steps:\n1. Draw diagonal AC = 7 cm\n2. With A as centre, radius 4 cm → arc. With C, radius 5 cm → arc. Intersection = B\n3. Join AB and BC\n4. With A, radius 5.5 cm → arc. With C, radius 6 cm → arc. Intersection = D\n5. Join CD and DA\nABCD is the required quadrilateral.", marks: 4 },
+    ],
+    examTips: [
+      { category: "Steps", tip: "Start by drawing the diagonal — it splits quadrilateral into two constructible triangles." },
+    ],
+    fillInBlanks: [
+      { sentence: "To construct a quadrilateral, you need ___ independent measurements.", answer: "5" },
+      { sentence: "A diagonal divides a quadrilateral into two ___.", answer: "triangles" },
+    ],
+    matchPairs: [
+      { left: "4 sides + 1 diagonal", right: "5 measurements" },
+      { left: "3 sides + 2 diagonals", right: "5 measurements" },
+      { left: "Compass", right: "Drawing arcs" },
+      { left: "Protractor", right: "Measuring angles" },
+    ],
+  },
+  "math-18": {
+    solvedExamples: [
+      { question: "A chord is 24 cm long and 5 cm from centre. Find radius. (2 marks)", solution: "Perpendicular bisects chord: half = 12 cm, distance = 5 cm\nr² = 12² + 5² = 144 + 25 = 169\nr = 13 cm", marks: 2 },
+    ],
+    examTips: [
+      { category: "Property", tip: "Perpendicular from centre to chord bisects it — use Pythagoras." },
+    ],
+    fillInBlanks: [
+      { sentence: "The longest chord of a circle is the ___.", answer: "diameter" },
+      { sentence: "Perpendicular from centre to chord ___ the chord.", answer: "bisects" },
+    ],
+    matchPairs: [
+      { left: "Radius", right: "Centre to circumference" },
+      { left: "Diameter", right: "Longest chord" },
+      { left: "Arc", right: "Part of circumference" },
+      { left: "Sector", right: "Pie-slice region" },
+    ],
+  },
+  "math-20": {
+    solvedExamples: [
+      { question: "Bag has 5 red, 3 blue, 2 green balls. Find P(red), P(not red). (3 marks)", solution: "Total = 10\nP(red) = 5/10 = 1/2\nP(not red) = 1 − 1/2 = 1/2", marks: 3 },
+    ],
+    examTips: [
+      { category: "Formula", tip: "P(not E) = 1 − P(E). For pie charts: angle = (value/total) × 360°." },
+    ],
+    fillInBlanks: [
+      { sentence: "Probability lies between ___ and 1.", answer: "0" },
+      { sentence: "P(certain event) = ___.", answer: "1" },
+      { sentence: "In a pie chart, total angle = ___°.", answer: "360" },
+    ],
+    matchPairs: [
+      { left: "P(impossible)", right: "0" },
+      { left: "P(certain)", right: "1" },
+      { left: "Histogram", right: "Continuous grouped data" },
+      { left: "Bar graph", right: "Discrete categories" },
+    ],
+  },
+
+  // ===== MISSING GEOGRAPHY EXTRAS =====
+  "geo-2": {
+    solvedExamples: [
+      { question: "Scale 1:50,000. Find ground distance for 4 cm on map. (2 marks)", solution: "4 cm × 50,000 = 200,000 cm = 2000 m = 2 km", marks: 2 },
+    ],
+    examTips: [
+      { category: "Conversion", tip: "Always convert final answer to km. 100,000 cm = 1 km." },
+      { category: "Grid", tip: "Grid reference: Eastings first, then Northings." },
+    ],
+    fillInBlanks: [
+      { sentence: "In grid references, ___ are read first (horizontal).", answer: "Eastings" },
+      { sentence: "A large-scale map shows a ___ area in great detail.", answer: "small" },
+    ],
+    matchPairs: [
+      { left: "Physical map", right: "Natural features" },
+      { left: "Political map", right: "Boundaries and cities" },
+      { left: "Thematic map", right: "Specific topic" },
+      { left: "Large scale", right: "Small area, more detail" },
+    ],
+  },
+  "geo-4": {
+    solvedExamples: [
+      { question: "Describe the soil profile. (4 marks)", solution: "O Horizon: Organic matter (humus)\nA Horizon: Topsoil — most fertile, dark\nB Horizon: Subsoil — minerals washed down\nC Horizon: Weathered rock\nR Horizon: Bedrock", marks: 4 },
+    ],
+    examTips: [
+      { category: "Diagram", tip: "Draw soil profile with all 5 layers labelled — appears almost every year." },
+    ],
+    fillInBlanks: [
+      { sentence: "The most fertile layer is ___ (A horizon).", answer: "topsoil" },
+      { sentence: "Black soil is also called ___ soil.", answer: "Regur" },
+      { sentence: "Removal of topsoil by wind/water is soil ___.", answer: "erosion" },
+    ],
+    matchPairs: [
+      { left: "Alluvial soil", right: "River plains, most fertile" },
+      { left: "Black soil", right: "Deccan Plateau, cotton" },
+      { left: "Red soil", right: "Iron-rich, south India" },
+      { left: "Laterite soil", right: "Heavy rainfall areas" },
+    ],
+  },
+  "geo-5": {
+    solvedExamples: [
+      { question: "Differentiate between Evergreen and Deciduous forests. (4 marks)", solution: "Evergreen: >200cm rain, always green, dense canopy, Western Ghats/NE India, Rosewood/Ebony\nDeciduous: 100-200cm rain, shed leaves in dry season, Teak/Sal/Bamboo, MP/UP/Bihar", marks: 4 },
+    ],
+    examTips: [
+      { category: "Conservation", tip: "Chipko Movement (1973) and Van Mahotsav are frequently asked." },
+    ],
+    fillInBlanks: [
+      { sentence: "Forests that shed leaves seasonally are ___ forests.", answer: "deciduous" },
+      { sentence: "The ___ is the largest mangrove forest.", answer: "Sundarbans" },
+      { sentence: "The Chipko Movement took place in ___.", answer: "1973" },
+    ],
+    matchPairs: [
+      { left: "Evergreen", right: "Heavy rainfall, always green" },
+      { left: "Deciduous", right: "Shed leaves in dry season" },
+      { left: "Mangrove", right: "Coastal tidal areas" },
+      { left: "Alpine", right: "High altitude mountains" },
+    ],
+  },
+  "geo-6": {
+    solvedExamples: [
+      { question: "What is rainwater harvesting? Why is it important? (3 marks)", solution: "Collecting and storing rainwater for later use.\nMethods: rooftop harvesting, surface runoff collection, recharge pits\nImportance: water during dry seasons, recharges groundwater, reduces flooding, cost-effective", marks: 3 },
+    ],
+    examTips: [
+      { category: "Application", tip: "Rainwater harvesting: know methods + importance + diagram." },
+    ],
+    fillInBlanks: [
+      { sentence: "The most water-efficient irrigation is ___ irrigation.", answer: "drip" },
+      { sentence: "The upper level of underground water is the water ___.", answer: "table" },
+    ],
+    matchPairs: [
+      { left: "Canal irrigation", right: "From rivers/dams" },
+      { left: "Drip irrigation", right: "Most water-efficient" },
+      { left: "Sprinkler", right: "Rotating water spray" },
+      { left: "Rainwater harvesting", right: "Collecting rainwater" },
+    ],
+  },
+  "geo-7": {
+    solvedExamples: [
+      { question: "Why should India develop non-conventional energy? (4 marks)", solution: "1. Fossil fuels are limited\n2. Burning causes pollution/global warming\n3. India has abundant solar potential\n4. Reduces oil imports\n5. Clean energy improves health\n6. Creates green jobs\n7. Paris Climate Agreement commitment", marks: 4 },
+    ],
+    examTips: [
+      { category: "Current Affairs", tip: "Know India's renewable energy targets and achievements." },
+    ],
+    fillInBlanks: [
+      { sentence: "Coal is a ___ fuel.", answer: "fossil" },
+      { sentence: "Solar, wind, tidal are ___ energy sources.", answer: "renewable" },
+    ],
+    matchPairs: [
+      { left: "Coal", right: "Non-renewable, most used" },
+      { left: "Solar energy", right: "Renewable, abundant" },
+      { left: "Iron ore", right: "Jharkhand, Odisha" },
+      { left: "Mica", right: "Jharkhand, Bihar" },
+    ],
+  },
+  "geo-9": {
+    solvedExamples: [
+      { question: "Differentiate between Kharif and Rabi crops. (4 marks)", solution: "Kharif: sown June-July, harvested Sep-Oct, need heavy rain (rice, cotton, jute)\nRabi: sown Oct-Nov, harvested Mar-Apr, need cool climate (wheat, barley, mustard)", marks: 4 },
+    ],
+    examTips: [
+      { category: "Map", tip: "Know major crop-producing states: Rice (WB, Punjab), Wheat (UP, Punjab), Tea (Assam)." },
+    ],
+    fillInBlanks: [
+      { sentence: "Rice is a ___ crop.", answer: "Kharif" },
+      { sentence: "Wheat is a ___ crop.", answer: "Rabi" },
+      { sentence: "India is the world's ___ largest tea producer.", answer: "second" },
+    ],
+    matchPairs: [
+      { left: "Rice", right: "Kharif, heavy rainfall" },
+      { left: "Wheat", right: "Rabi, cool climate" },
+      { left: "Tea", right: "Assam, West Bengal" },
+      { left: "Cotton", right: "Maharashtra, Gujarat" },
+    ],
+  },
+  "geo-10": {
+    solvedExamples: [
+      { question: "Discuss the iron and steel industry in India. (4 marks)", solution: "Major centres: TISCO (Jamshedpur), Bhilai (Chhattisgarh), Rourkela (Odisha), Durgapur (WB)\nFactors: proximity to raw materials, water, power, transport\nIndia is 2nd largest crude steel producer.", marks: 4 },
+    ],
+    examTips: [
+      { category: "Location", tip: "Steel plants near raw materials (iron ore + coal). Bengaluru = Silicon Valley of India." },
+    ],
+    fillInBlanks: [
+      { sentence: "TISCO is in ___, Jharkhand.", answer: "Jamshedpur" },
+      { sentence: "Bengaluru is the ___ Valley of India.", answer: "Silicon" },
+    ],
+    matchPairs: [
+      { left: "TISCO", right: "Jamshedpur" },
+      { left: "Bhilai", right: "Chhattisgarh" },
+      { left: "Cotton textile", right: "Mumbai, Ahmedabad" },
+      { left: "IT industry", right: "Bengaluru" },
+    ],
+  },
+
+  // ===== MISSING HISTORY EXTRAS =====
+  "hist-1": {
+    solvedExamples: [
+      { question: "What was the Renaissance? Discuss its impact. (5 marks)", solution: "Renaissance (14th-17th century): 'rebirth' of art/learning in Europe.\nCauses: Fall of Constantinople, printing press (Gutenberg), wealthy patrons\nImpact: Revival of classical learning, scientific discoveries (Copernicus, Galileo), great art (Da Vinci, Michelangelo), humanism, voyages of discovery", marks: 5 },
+    ],
+    examTips: [
+      { category: "Timeline", tip: "Renaissance → Reformation → Voyages → Industrial Revolution." },
+    ],
+    fillInBlanks: [
+      { sentence: "Renaissance means ___.", answer: "rebirth" },
+      { sentence: "The printing press was invented by ___.", answer: "Gutenberg" },
+      { sentence: "The Industrial Revolution began in ___.", answer: "England" },
+    ],
+    matchPairs: [
+      { left: "Renaissance", right: "Rebirth of learning" },
+      { left: "Reformation", right: "Martin Luther" },
+      { left: "Gutenberg", right: "Printing press" },
+      { left: "Columbus", right: "Discovered America (1492)" },
+      { left: "Vasco da Gama", right: "Sea route to India (1498)" },
+    ],
+  },
+  "hist-3": {
+    solvedExamples: [
+      { question: "Discuss the decline of the Mughal Empire. (5 marks)", solution: "Causes:\n1. Aurangzeb: religious intolerance, Jaziya tax, long Deccan wars\n2. Weak successors after 1707\n3. Rise of Marathas, Sikhs, Hyderabad, Awadh\n4. Nadir Shah (1739) and Ahmad Shah Abdali invasions\n5. European exploitation of political disunity", marks: 5 },
+    ],
+    examTips: [
+      { category: "Structure", tip: "Group causes: Aurangzeb's policies, weak successors, regional powers, invasions." },
+    ],
+    fillInBlanks: [
+      { sentence: "Aurangzeb reimposed the ___ tax.", answer: "Jaziya" },
+      { sentence: "Nadir Shah invaded Delhi in ___.", answer: "1739" },
+      { sentence: "The last Mughal Emperor was ___.", answer: "Bahadur Shah Zafar" },
+    ],
+    matchPairs: [
+      { left: "Nizam-ul-Mulk", right: "Hyderabad" },
+      { left: "Murshid Quli Khan", right: "Bengal" },
+      { left: "Nadir Shah", right: "Looted Delhi (1739)" },
+      { left: "Ranjit Singh", right: "Sikh Empire" },
+    ],
+  },
+  "hist-4": {
+    solvedExamples: [
+      { question: "Describe the Battle of Plassey and its significance. (5 marks)", solution: "Battle of Plassey (1757): Clive vs Siraj-ud-Daulah. Mir Jafar betrayed Siraj.\nSignificance: British gained Bengal (richest province), beginning of British political power in India, 'divide and rule' strategy, funded further conquests", marks: 5 },
+    ],
+    examTips: [
+      { category: "Dates", tip: "Plassey (1757) = beginning of British rule. Buxar (1764) = confirmed supremacy." },
+    ],
+    fillInBlanks: [
+      { sentence: "Battle of Plassey was fought in ___.", answer: "1757" },
+      { sentence: "___ betrayed Siraj-ud-Daulah.", answer: "Mir Jafar" },
+      { sentence: "The Doctrine of ___ annexed Indian kingdoms.", answer: "Lapse" },
+    ],
+    matchPairs: [
+      { left: "1757", right: "Battle of Plassey" },
+      { left: "1764", right: "Battle of Buxar" },
+      { left: "Doctrine of Lapse", right: "Lord Dalhousie" },
+      { left: "Dual Government", right: "Bengal after Buxar" },
+    ],
+  },
+  "hist-5": {
+    solvedExamples: [
+      { question: "Explain the Drain of Wealth theory. (4 marks)", solution: "Proposed by Dadabhai Naoroji ('Grand Old Man of India').\nIndia's wealth systematically drained to Britain through: British officials' salaries, company profits, cheap raw material exports, forced purchase of British goods, home charges for wars.", marks: 4 },
+    ],
+    examTips: [
+      { category: "Systems", tip: "Know all three land revenue systems: Permanent Settlement, Mahalwari, Ryotwari." },
+    ],
+    fillInBlanks: [
+      { sentence: "Drain of Wealth theory by ___.", answer: "Dadabhai Naoroji" },
+      { sentence: "Permanent Settlement by Lord ___.", answer: "Cornwallis" },
+      { sentence: "Wood's Despatch introduced ___ education.", answer: "modern" },
+    ],
+    matchPairs: [
+      { left: "Permanent Settlement", right: "Lord Cornwallis, Bengal" },
+      { left: "Mahalwari", right: "Holt Mackenzie, NW India" },
+      { left: "Ryotwari", right: "Thomas Munro, South India" },
+      { left: "Drain of Wealth", right: "Dadabhai Naoroji" },
+    ],
+  },
+  "hist-7": {
+    solvedExamples: [
+      { question: "Compare Brahmo Samaj and Arya Samaj. (4 marks)", solution: "Brahmo Samaj: Raja Ram Mohan Roy (1828), Western-influenced, anti-Sati, women's education\nArya Samaj: Dayanand Saraswati (1875), 'Back to Vedas', DAV schools, Shuddhi movement\nBoth opposed: caste, idol worship, superstition", marks: 4 },
+    ],
+    examTips: [
+      { category: "Compare", tip: "Brahmo Samaj vs Arya Samaj comparison is asked almost every year." },
+    ],
+    fillInBlanks: [
+      { sentence: "Brahmo Samaj was founded by ___.", answer: "Raja Ram Mohan Roy" },
+      { sentence: "Arya Samaj's motto: 'Back to the ___'.", answer: "Vedas" },
+      { sentence: "Widow Remarriage Act championed by ___.", answer: "Vidyasagar" },
+    ],
+    matchPairs: [
+      { left: "Raja Ram Mohan Roy", right: "Brahmo Samaj (1828)" },
+      { left: "Dayanand Saraswati", right: "Arya Samaj (1875)" },
+      { left: "Vivekananda", right: "Ramakrishna Mission" },
+      { left: "Jyotiba Phule", right: "Caste reform" },
+      { left: "Sir Syed Ahmad Khan", right: "Muslim education" },
+    ],
+  },
+  "hist-10": {
+    solvedExamples: [
+      { question: "Explain powers of the President of India. (5 marks)", solution: "Executive: appoints PM, Governors, judges\nLegislative: summons Parliament, ordinances, dissolve Lok Sabha\nJudicial: pardons, appoints judges\nEmergency: Art 352 (national), Art 356 (state), Art 360 (financial)\nActs on advice of Council of Ministers.", marks: 5 },
+    ],
+    examTips: [
+      { category: "Categories", tip: "Group powers: Executive, Legislative, Judicial, Emergency." },
+    ],
+    fillInBlanks: [
+      { sentence: "The President is elected by ___ College.", answer: "Electoral" },
+      { sentence: "President issues ___ when Parliament not in session.", answer: "ordinances" },
+      { sentence: "Article ___ = President's Rule.", answer: "356" },
+    ],
+    matchPairs: [
+      { left: "Article 352", right: "National Emergency" },
+      { left: "Article 356", right: "President's Rule" },
+      { left: "Article 360", right: "Financial Emergency" },
+      { left: "Pardon", right: "Judicial power" },
+    ],
+  },
+  "hist-11": {
+    solvedExamples: [
+      { question: "Explain jurisdiction of the Supreme Court. (4 marks)", solution: "Original: Centre-State disputes, fundamental rights\nAppellate: Appeals from High Courts\nAdvisory: President seeks opinion\nOther: Judicial Review, Court of Record, guardian of fundamental rights", marks: 4 },
+    ],
+    examTips: [
+      { category: "Writs", tip: "Memorize all 5 writs: Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo Warranto." },
+    ],
+    fillInBlanks: [
+      { sentence: "Judicial Review = declaring laws ___.", answer: "unconstitutional" },
+      { sentence: "Habeas Corpus = 'produce the ___'.", answer: "body" },
+      { sentence: "Supreme Court is ___ of fundamental rights.", answer: "guardian" },
+    ],
+    matchPairs: [
+      { left: "Habeas Corpus", right: "Produce arrested person" },
+      { left: "Mandamus", right: "Order to perform duty" },
+      { left: "Prohibition", right: "Stop lower court" },
+      { left: "Certiorari", right: "Transfer case up" },
+      { left: "Quo Warranto", right: "Question authority" },
+    ],
+  },
+
+  // ===== MISSING COMPUTER EXTRAS =====
+  "comp-2": {
+    solvedExamples: [
+      { question: "Write HTML for a table with student marks. (3 marks)", solution: "<table border='1'>\n  <tr><th>Subject</th><th>Marks</th></tr>\n  <tr><td>Maths</td><td>95</td></tr>\n  <tr><td>Science</td><td>88</td></tr>\n</table>\n\nTags: <table>, <tr> (row), <th> (header), <td> (data)", marks: 3 },
+    ],
+    examTips: [
+      { category: "Structure", tip: "HTML: proper nesting <html><head></head><body></body></html>." },
+      { category: "Tags", tip: "Know all common tags: headings, paragraphs, images, links, tables, forms." },
+    ],
+    fillInBlanks: [
+      { sentence: "HTML stands for HyperText ___ Language.", answer: "Markup" },
+      { sentence: "The <a> tag creates ___.", answer: "links" },
+      { sentence: "The ___ attribute in <img> provides alternative text.", answer: "alt" },
+    ],
+    matchPairs: [
+      { left: "<h1>", right: "Largest heading" },
+      { left: "<p>", right: "Paragraph" },
+      { left: "<img>", right: "Image" },
+      { left: "<a>", right: "Hyperlink" },
+      { left: "<table>", right: "Table" },
+    ],
+  },
+  "comp-4": {
+    solvedExamples: [
+      { question: "Write Python to check if a number is positive, negative, or zero. (3 marks)", solution: "num = int(input('Enter a number: '))\nif num > 0:\n    print('Positive')\nelif num < 0:\n    print('Negative')\nelse:\n    print('Zero')", marks: 3 },
+    ],
+    examTips: [
+      { category: "Indentation", tip: "Python uses indentation (4 spaces) for blocks — wrong indentation = error!" },
+      { category: "Operators", tip: "and (both true), or (either true), not (reverses)." },
+    ],
+    fillInBlanks: [
+      { sentence: "elif stands for ___ if.", answer: "else" },
+      { sentence: "Python uses ___ to define code blocks.", answer: "indentation" },
+      { sentence: "___ operator: True if both conditions True.", answer: "and" },
+    ],
+    matchPairs: [
+      { left: "if", right: "First condition check" },
+      { left: "elif", right: "Alternative condition" },
+      { left: "else", right: "Default case" },
+      { left: "and", right: "Both true" },
+      { left: "or", right: "At least one true" },
+    ],
+  },
+  "comp-6": {
+    solvedExamples: [
+      { question: "Write Python to find the largest number in a list. (3 marks)", solution: "numbers = [23, 45, 12, 67, 89, 11]\nlargest = max(numbers)  # Built-in method\nprint(f'Largest: {largest}')\n\n# Or with loop:\nlargest = numbers[0]\nfor num in numbers:\n    if num > largest:\n        largest = num", marks: 3 },
+    ],
+    examTips: [
+      { category: "Methods", tip: "Key list methods: append(), remove(), pop(), sort(), reverse(), len(), max(), min()." },
+      { category: "Slicing", tip: "list[1:4] returns index 1,2,3. list[-1] returns last element." },
+    ],
+    fillInBlanks: [
+      { sentence: "fruits[-1] returns the ___ element.", answer: "last" },
+      { sentence: "list.append(x) adds x to the ___.", answer: "end" },
+      { sentence: "list[1:4] is called ___.", answer: "slicing" },
+    ],
+    matchPairs: [
+      { left: "append()", right: "Add to end" },
+      { left: "remove()", right: "Delete by value" },
+      { left: "pop()", right: "Delete by index" },
+      { left: "sort()", right: "Arrange in order" },
+      { left: "len()", right: "Count elements" },
+    ],
+  },
+  "comp-8": {
+    solvedExamples: [
+      { question: "What is AI? Explain Machine Learning. (4 marks)", solution: "AI: simulation of human intelligence by machines.\nML: computers learn from data without explicit programming.\nTypes: Supervised (labelled data), Unsupervised (patterns), Reinforcement (trial & error)\nApplications: virtual assistants, self-driving cars, medical diagnosis, recommendations", marks: 4 },
+    ],
+    examTips: [
+      { category: "Examples", tip: "Use real-world AI examples — examiners prefer practical understanding." },
+      { category: "Ethics", tip: "AI ethics (bias, privacy, jobs) increasingly common in exams." },
+    ],
+    fillInBlanks: [
+      { sentence: "AI stands for ___ Intelligence.", answer: "Artificial" },
+      { sentence: "Machine Learning learns from ___.", answer: "data" },
+      { sentence: "Supervised learning uses ___ data.", answer: "labelled" },
+    ],
+    matchPairs: [
+      { left: "Supervised learning", right: "Labelled data" },
+      { left: "Unsupervised learning", right: "Pattern finding" },
+      { left: "Reinforcement learning", right: "Trial and error" },
+      { left: "Neural network", right: "Inspired by brain" },
+      { left: "Chatbot", right: "AI conversation" },
+    ],
+  },
 };
